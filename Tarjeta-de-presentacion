@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Aqui establecemos el box-sizing, esto hace que el tamaño del elemento no cambie por lo que esvribamos, ni por el padding (espacio alrededor del contenido dentro de un elemento)*/
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*Aqui establecemos el display:flex para que sus hijos puedan alinearse de forma flexible, sin restricciones, justify content:center es para que el contenido quede en el centro, y el width es el tamaño que le asignamos, en este caso es el 100%*/
+        section{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+/*Aqui establecemos display:grid para que quede alineado, ya que si usamos otro metodo de display puede quedar encimada las palabras una encima de la otra, la imagen etc, establecemos los tamaños, color*/
+        .card{
+    display: grid;
+    justify-items: center;
+    margin-top: 50px;
+    width: 450px;
+    height: 600px;
+    background: papayawhip ;
+    border-radius: 20px;
+    overflow: hidden;
+}
+/*Aqui establecemos los tamaños de la imagen y algo importante es el object-fits: scale-down, recomiendo scale-down ya que hace que la imagen se vuelva del tamaño que queramos sin modificar como se ve, ademas aqui hacemos que la imagen se vuelva redonda con border-radius */
+.card img{
+    margin-top: 40px;
+    width: 60%;
+    border-radius: 50%;
+    object-fit: scale-down;
+}
+/*De aqui para abajo solo establecemos tamaños, colores y alineaciones de los textos*/ 
+.card p{
+    text-align: center;
+}
+
+.card p:nth-child(3){
+    color: rgb(80, 4, 163);
+    margin-top: -60px;
+    font-size: 20px;
+}
+
+.card p:nth-child(2){
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    color: rgb(131, 82, 131);;
+}
+
+.card #tarjeta{
+    color: yellow;
+    font-size: 30px;
+    width: 100%;
+    background: rgb(131, 82, 131);
+    text-align: center;
+    padding-top: 40px;
+}
+    </style>
+</head>
+<body>
+    <div class="Tarjeta"></div>
+    <section>
+        <div class="card">
+            <img src="https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg" alt="Perrito">
+            <p>Derik Londoño</p>
+            <p>Estudiante</p>
+            <button id="tarjeta"> <a href="/">Seguir aprendiendo</a>
+
+            </button>
+
+        </div>
+    </section>
+</body>
+</html>
